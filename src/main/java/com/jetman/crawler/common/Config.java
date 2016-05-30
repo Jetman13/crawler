@@ -1,4 +1,4 @@
-package com.crawler.common;
+package com.jetman.crawler.common;
 
 public class Config {
 	

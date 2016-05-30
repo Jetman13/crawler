@@ -1,6 +1,7 @@
-package com.crawler.app;
+package com.jetman.crawler.app;
 
-import com.crawler.common.Config;
+
+import com.jetman.crawler.common.Config;
 
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;
 import edu.uci.ics.crawler4j.crawler.CrawlController;
