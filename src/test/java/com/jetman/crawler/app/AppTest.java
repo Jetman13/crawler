@@ -1,4 +1,4 @@
-package com.crawler.app;
+package com.jetman.crawler.app;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
