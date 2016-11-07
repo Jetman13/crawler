@@ -2,6 +2,7 @@
 ##简单java爬虫，爬取挖财社区理财文章
 技术点：webmagic，mysql，mybatis
 表结构:
+```mysql
 CREATE TABLE `t_article` (
   `id` int(11) NOT NULL auto_increment,
   `title` varchar(200) NOT NULL default '' COMMENT '标题',
@@ -16,7 +17,7 @@ CREATE TABLE `t_article` (
   UNIQUE KEY `uk_url_md5` (`url_md5`),
   KEY `idx_source` (`source`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+```
 详情例子
 
 *QQ:823099993
