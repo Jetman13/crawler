@@ -8,20 +8,17 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import us.codecraft.webmagic.Page;
-import us.codecraft.webmagic.Site;
-import us.codecraft.webmagic.Spider;
-import us.codecraft.webmagic.pipeline.JsonFilePipeline;
-import us.codecraft.webmagic.processor.PageProcessor;
-import us.codecraft.webmagic.scheduler.QueueScheduler;
-import us.codecraft.webmagic.scheduler.component.BloomFilterDuplicateRemover;
-import us.codecraft.webmagic.selector.Html;
-
 import com.jetman.utils.MD5;
 import com.jetman.webmagic.model.WacaiArticleModel;
 import com.jetman.webmagic.pipeline.ArticlePipeline;
 
-import javax.annotation.Resource;
+import us.codecraft.webmagic.Page;
+import us.codecraft.webmagic.Site;
+import us.codecraft.webmagic.Spider;
+import us.codecraft.webmagic.processor.PageProcessor;
+import us.codecraft.webmagic.scheduler.QueueScheduler;
+import us.codecraft.webmagic.scheduler.component.BloomFilterDuplicateRemover;
+import us.codecraft.webmagic.selector.Html;
 
 
 public class WaCaiProcessor implements PageProcessor{
@@ -31,16 +28,13 @@ public class WaCaiProcessor implements PageProcessor{
 	
 	private Site site = Site.me().setRetryTimes(3).setSleepTime(100);
 	
-//	@Resource(name = "articlePipeline")
-//    private ArticlePipeline articlePipeline;
 
 	public void process(Page page) {
 		
-		System.out.println(page.getUrl());
-		System.out.println(pageNum);
+		LOGGER.info("页面链接 {}",page.getUrl());
+		LOGGER.info("pageNum数量{}",pageNum);
 		pageNum++;
 		List<String> targetList = page.getHtml().links().regex("(http://bbs.wacai\\.com/\\w+/\\w+)").all();
-//		System.err.println(page.getHtml().css("div#ct").css("div.m-plates").toString());
 		//主页板块
 		List<String> homeList = page.getHtml().css("div#ct").css("div.m-plates").links().all();
 		//翻页板块

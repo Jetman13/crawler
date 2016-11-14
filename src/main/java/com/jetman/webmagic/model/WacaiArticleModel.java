@@ -1,7 +1,11 @@
 package com.jetman.webmagic.model;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-
+/**
+ * 挖财社区文章详情
+ * @author Jetman
+ *
+ */
 public class WacaiArticleModel extends BasicArticleModel{
 	/**
 	 * 回复数

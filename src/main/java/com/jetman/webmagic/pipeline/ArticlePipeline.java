@@ -3,17 +3,16 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.jetman.webmagic.dao.ArticleDao;
+import com.jetman.webmagic.model.WacaiArticleModel;
+
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.pipeline.Pipeline;
-
-import com.jetman.webmagic.dao.ArticleDao;
-import com.jetman.webmagic.model.WacaiArticleModel;
 
 /**
  * @author code4crafer@gmail.com
